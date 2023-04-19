@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="head">
+        <a href="/" class="back">
+            <img class="arrow" src="./src/images/right.svg" alt="">
+            <span>Back</span>
+        </a>
+        <a href="/" class="logo">
+            <img src="./src/images/Logo.svg" alt="">
+        </a>
+        <a href="/" class="btn-transparent">
+            <span>Skip</span>
+        </a>
+    </section>
+    <div class="navigation">
+        <div class="navigation__btn"></div>
+        <div class="navigation__btn"></div>
+        <div class="navigation__btn active"></div>
+    </div>
+    <section class="card">
+        <div class="wrapper">
+            <div class="card__head">
+                <div class="title">
+                    <h1>Connect your bank card</h1>
+                </div>
+                <div class="description">
+                    <p>You'll get discounted prices when shopping with Slash using this card. Your data will be stored on
+                        secure servers using industry standard encryption and will not be shared with any third party. </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-wrapper front">
+                    <div class="chip">
+                        <img src="./src/images/chip.svg" alt="">
+                    </div>
+                    <div class="number">
+                        <label for="/">Card number</label>
+                        <input type="text" maxlength="19" class="number_input">
+                    </div>
+                    <div class="inputs-wrapper">
+                        <div class="cardholder">
+                            <label for="">Cardholder name</label>
+                            <input type="text" class="cardholder_input">
+                        </div>
+                        <div class="date">
+                            <label for="">Expiry date</label>
+                            <input type="text" maxlength="5" class="date_input">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper back">
+                    <div class="cvv">
+                        <div class="cvv__title">
+                            <label for="">CVV/CVC</label>
+                            <div class="card__about">
+                                <img src="./src/images/atten.svg" alt="">
+                            </div>
+                            <div class="popup">
+                                <div class="close">
+                                    <img src="./src/images/close.svg" alt="">
+                                </div>
+                                <span class="description">
+                                    3 digits on the back of your card.
+                                </span>
+                            </div>
+                        </div>
+                        <input class="cvv_input" maxlength="3" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-block">
+        <div class="wrapper">
+            <div class="wrapper-footer">
+                <a href="#" class="btn">
+                    <span>Connect</span>
+                    <span class="wrapper-image">
+                        <img src="./src/images/security.svg" alt="">
+                    </span>
+                </a>
+                <div class="bank-cards">
+                    <img src="./src/images/bank%20card.svg" alt="">
+                    <img src="./src/images/bank%20card-1.svg" alt="">
+                    <img src="./src/images/bank%20card-2.svg" alt="">
+                </div>
+            </div>
+            <div class="notice">
+                We'll charge and refund €1 to check if the card is valid.
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./src/scripts/script.js"></script>
+</html>

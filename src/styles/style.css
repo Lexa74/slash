@@ -1,0 +1,347 @@
+@font-face {
+    font-family: "EuclidRegular";
+    src: url("../fonts/Euclid Circular A Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "EuclidMedimum";
+    src: url("../fonts/Euclid Circular A Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "EuclidSemiBold";
+    src: url("../fonts/Euclid Circular A SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "EuclidBold";
+    src: url("../fonts/Euclid Circular A Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #050A1B;
+}
+
+input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+body {
+    padding: 16px;
+    font-family: EuclidRegular;
+    color: #050A1B;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    padding: 13px 28px;
+    font-family: EuclidMedimum;
+    text-align: center;
+    background: #0432D3;
+    color: white;
+    display: block;
+    transition: .3s all;
+}
+
+.btn:hover {
+    background: #1B4DFF;
+}
+
+.btn:active {
+    background: #0024A4;;
+}
+
+.btn-transparent {
+    color: #0432D3;
+    border: 2px solid #0432D3;
+    padding: 13px 28px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    transition: .3s all;
+}
+
+.btn-transparent:hover {
+    color: #1B4DFF;
+    border-color: #1B4DFF;
+}
+
+.btn-transparent:active {
+    color: #0024A4;
+    border-color: #0024A4;
+}
+
+.wrapper {
+    width: 592px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: EuclidMedimum;
+}
+
+.head .back {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.head .back .arrow {
+    margin-right: 8px;
+}
+
+.head .logo {
+    position: relative;
+    left: 16px;
+}
+
+.navigation {
+    margin: 34px 0 16px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation .navigation__btn {
+    width: 12px;
+    height: 4px;
+    background: #D0D9EF;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.navigation .navigation__btn:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.navigation .navigation__btn.active {
+    width: 32px;
+    background: #0432D3;
+}
+
+.cards {
+    position: relative;
+}
+
+.card input {
+    padding: 17px 20px;
+    font-size: 16px;
+    line-height: 140%;
+    background: #F2F5FC;
+    max-height: 56px;
+}
+
+.card label {
+    font-size: 14px;
+    line-height: 130%;
+    display: block;
+    margin-bottom: 6px ;
+}
+
+.card .card__head {
+    text-align: center;
+}
+
+.card .title {
+    font-family: EuclidBold;
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+
+.card .card__head .description {
+    font-size: 14px;
+    line-height: 130%;
+    margin-bottom: 72px;
+}
+
+.card .card-wrapper {
+    max-width: 460px;
+    width: 100%;
+    padding: 28px;
+    border: 2px solid #98ABD9;
+    border-radius: 20px;
+}
+
+.card .card-wrapper.front {
+    position: relative;
+    z-index: 2;
+    background: white;
+}
+
+.card .card-wrapper.front .chip {
+    max-width: 36px;
+    margin-bottom: 23px;
+}
+
+.card .inputs-wrapper {
+    margin-top: 18px;
+    display: flex;
+    gap: 16px;
+}
+
+.card-wrapper .number {
+    width: 100%;
+}
+
+.card-wrapper .cardholder {
+    max-width: 289px;
+    width: 100%;
+}
+
+.card-wrapper .date {
+    max-width: 86px;
+}
+
+.card-wrapper.back {
+    border-color: #D0D9EF;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding-top: 136px;
+    padding-bottom: 74px;
+}
+
+.card-wrapper .cvv {
+    width: 90px;
+    margin-left: auto;
+}
+
+.card-wrapper .cvv .cvv__title {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-wrapper .cvv .cvv__title .card__about {
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.card-wrapper .popup {
+    position: absolute;
+    background-image: url("../images/popup.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 170px;
+    color: white;
+    z-index: 3;
+    top: 20px;
+    right: 15px;
+    opacity: 0;
+    transition: .3s all;
+}
+
+.card-wrapper .popup.active {
+    opacity: 1;
+}
+
+.card-wrapper .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.card-wrapper .popup .description {
+    padding: 30px 29px 50px 20px;
+    display: block;
+}
+
+.footer-block {
+    margin-top: 72px;
+}
+
+.footer-block .wrapper-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-block .wrapper-image {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.footer-block .btn {
+    display: flex;
+    font-size: 16px;
+    line-height: 140%;
+    justify-content: center;
+    max-width: 150px;
+}
+
+.footer-block .bank-cards {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notice {
+    color: #595C67;
+    font-size: 12px;
+    line-height: 140%;
+    margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        width: 100%;
+    }
+    .card-wrapper.back {
+        top: 140px;
+        padding-top: 186px;
+        padding-bottom: 24px;
+    }
+    .footer-block {
+        margin-top: 190px;
+    }
+}
+
+@media (max-width: 475px) {
+    .card .card-wrapper {
+        width: 120%;
+    }
+
+    .footer-block .wrapper-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-block .bank-cards {
+        margin-top: 20px;
+    }
+    .card-wrapper .number, .card .inputs-wrapper {
+        width: 85%;
+    }
+}
