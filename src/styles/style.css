@@ -327,13 +327,18 @@ img {
     .footer-block {
         margin-top: 190px;
     }
+    .card .title {
+        font-size: 24px;
+    }
+    .card-wrapper .popup {
+        top: 70px;
+    }
 }
 
 @media (max-width: 475px) {
     .card .card-wrapper {
         width: 120%;
     }
-
     .footer-block .wrapper-footer {
         flex-direction: column;
         align-items: flex-start;
@@ -343,5 +348,8 @@ img {
     }
     .card-wrapper .number, .card .inputs-wrapper {
         width: 85%;
+    }
+    .card .title {
+        font-size: 22px;
     }
 }
